@@ -109,16 +109,16 @@ Anomaly check: the normal range (mean ± 2 std) is -24.0 to 651.5. No record fal
 
 # 6. Key Business Insights and Recommendations
    
-1	Poor air quality is the norm, not the exception. The average AQI is 313.8, which sits in the "Very Poor" band, and 62% of records are Very Poor or Severe. Only 15% are Good or Satisfactory.	Treat air quality as a standing public health priority rather than a seasonal problem. Set up year-round health advisories.
+1. Hyderabad has the highest average AQI in this dataset, while Jaipur has the lowest average AQI.
 
-2	Hyderabad, Mumbai and Ahmedabad are the most polluted cities in this data (average AQI 360 to 375). Jaipur is the cleanest at 206, a gap of about 169 points.	Focus monitoring and intervention budgets on the top three cities first. Study what keeps Jaipur lower and test whether it can be replicated.
+2. The Severe AQI category contains the highest number of records, with 45 out of 100 records.
 
-3	PM2.5 is the dominant driver of AQI (correlation 0.89). Every other pollutant is below 0.15.	Prioritise PM2.5 sources: vehicle emissions, construction dust, industrial output and biomass burning.
+3. PM2.5 has the strongest positive correlation with AQI among the pollutant columns in this dataset.
 
-4	Severe days are part of the normal pattern. No statistical outliers were found even though AQI ranges from 6 to 602. The problem is structural, not caused by rare events.	Plan for continuous, long-term controls and not only emergency measures during "spike" days.
+4. The correlation between PM2.5 and AQI is approximately 0.89, showing a strong positive relationship in this dataset.
 
-5	AQI changes sharply from day to day (standard deviation of about 169).	Use daily alerts that trigger when AQI crosses the Very Poor and Severe thresholds so people can respond early.
-
+5. No AQI values were identified as anomalies using the mean ± 2 standard deviations method.
+   
 # 7. Tools Used
    
 Python (pandas, matplotlib) for cleaning and exploratory analysis
