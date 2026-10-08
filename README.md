@@ -6,15 +6,6 @@ Task 4: Final Data Analytics Project | SWYNEX Technologies Internship
 
 This project combines my work from Tasks 1 to 3 into one end-to-end case study: cleaning a messy air quality dataset, exploring it with Python, and presenting the findings in an interactive Power BI dashboard.
 
-Table of Contents:
-Problem Statement
-Dataset Information
-Data Cleaning Process
-Exploratory Data Analysis
-Interactive Dashboard
-Key Business Insights and Recommendations
-Tools Used
-
 1. Problem Statement
 
 Air pollution is one of India's most serious public health and environmental challenges. Decision-makers such as city administrations and pollution control bodies need to know which cities have the worst air, how often air quality reaches dangerous levels, and which pollutant matters most. The raw monitoring data, however, is messy: it contains duplicate records, inconsistent city names and date formats, text mixed into numeric fields, invalid sensor readings, and many missing values.
@@ -28,10 +19,15 @@ Which pollutant is the strongest driver of AQI, so that interventions can be pri
 The results are presented in an interactive dashboard so that non-technical stakeholders can explore them by city, AQI category and date.
 
 2. Dataset Information
+
 Item	Details
+
 Raw file	india_aqi_raw_messy.csv (107 rows, 11 columns)
+
 Cleaned file	india_aqi_cleaned.csv (100 rows, 10 columns)
+
 Coverage	10 cities, 1 Jan 2023 to 3 Dec 2023
+
 Cities	Ahmedabad, Bengaluru, Chennai, Delhi, Hyderabad, Jaipur, Kolkata, Lucknow, Mumbai, Pune
 
 Columns (cleaned dataset)
@@ -108,44 +104,11 @@ NO2	-0.08
 
 Anomaly check: the normal range (mean ± 2 std) is -24.0 to 651.5. No record falls outside it, so the very high AQI days are part of the regular pattern and not isolated spikes.
 
-Charts
-
-	
-Show Image	Show Image
-Show Image	Show Image
-
-Show Image
-
 5. Interactive Dashboard
-
-File: dashboard/AQI_Analysis_Dashboard.pbix, built in Microsoft Power BI and titled India Air Quality Analysis: AQI Monitoring Dashboard | 2023.
-
-Show Image
-
-KPI cards
-
-Average AQI
-Maximum AQI
-Average PM2.5
-Severe AQI Records
-
-Charts
-
-AQI Trend Over Time (line chart)
-AQI Category Distribution (donut chart)
-Average AQI by City (column chart)
-Average PM2.5 vs PM10 by City (clustered column chart)
-
-Interactive filters (slicers)
-
-Select City
-AQI Category
-Date Range
-
-All visuals respond to the slicers, so a viewer can, for example, select one city and see its trend, category mix and pollutant levels in one click.
+<img width="1537" height="863" alt="dashboard_screenshot" src="https://github.com/user-attachments/assets/401e56dc-ebff-453f-9816-a801da37ffa0" />
 
 6. Key Business Insights and Recommendations
-Insight	Recommendation
+   
 1	Poor air quality is the norm, not the exception. The average AQI is 313.8, which sits in the "Very Poor" band, and 62% of records are Very Poor or Severe. Only 15% are Good or Satisfactory.	Treat air quality as a standing public health priority rather than a seasonal problem. Set up year-round health advisories.
 
 2	Hyderabad, Mumbai and Ahmedabad are the most polluted cities in this data (average AQI 360 to 375). Jaipur is the cleanest at 206, a gap of about 169 points.	Focus monitoring and intervention budgets on the top three cities first. Study what keeps Jaipur lower and test whether it can be replicated.
@@ -157,8 +120,11 @@ Insight	Recommendation
 5	AQI changes sharply from day to day (standard deviation of about 169).	Use daily alerts that trigger when AQI crosses the Very Poor and Severe thresholds so people can respond early.
 
 7. Tools Used
+   
 Python (pandas, matplotlib) for cleaning and exploratory analysis
+
 Microsoft Power BI for the interactive dashboard
+
 Git and GitHub for version control and sharing
 
 Completed as Task 4 of the SWYNEX Technologies internship program.
