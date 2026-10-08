@@ -1,4 +1,4 @@
-SWYNEX-Final-Data-Analytics-Project
+# SWYNEX-Final-Data-Analytics-Project
 
 India Air Quality (AQI) Analysis: From Messy Data to Business Insights
 
@@ -54,7 +54,7 @@ Records per city (cleaned): Delhi 22, Chennai 18, Mumbai 15, Jaipur 9, Ahmedabad
 
 The raw file had problems in almost every column. Each one was found and fixed as follows:
 
-#	Problem found in raw data	How it was fixed
+Problem found in raw data	How it was fixed
 1	7 exact duplicate rows (same reading repeated, only the serial number differed)	Removed duplicates (107 to 100 rows)
 2	Inconsistent city names: Delhi, delhi, DELHI, Chennai , MUMBAI (14 variants for 10 cities)	Trimmed spaces and standardised capitalisation
 3	Mixed date formats: 03/21/2023, 28/01/2023, 17-01-2023, 2023-01-29	Parsed all formats and converted to a single DD/MM/YYYY format
@@ -145,13 +145,16 @@ Date Range
 All visuals respond to the slicers, so a viewer can, for example, select one city and see its trend, category mix and pollutant levels in one click.
 
 6. Key Business Insights and Recommendations
-#	Insight	Recommendation
+Insight	Recommendation
 1	Poor air quality is the norm, not the exception. The average AQI is 313.8, which sits in the "Very Poor" band, and 62% of records are Very Poor or Severe. Only 15% are Good or Satisfactory.	Treat air quality as a standing public health priority rather than a seasonal problem. Set up year-round health advisories.
+
 2	Hyderabad, Mumbai and Ahmedabad are the most polluted cities in this data (average AQI 360 to 375). Jaipur is the cleanest at 206, a gap of about 169 points.	Focus monitoring and intervention budgets on the top three cities first. Study what keeps Jaipur lower and test whether it can be replicated.
+
 3	PM2.5 is the dominant driver of AQI (correlation 0.89). Every other pollutant is below 0.15.	Prioritise PM2.5 sources: vehicle emissions, construction dust, industrial output and biomass burning.
+
 4	Severe days are part of the normal pattern. No statistical outliers were found even though AQI ranges from 6 to 602. The problem is structural, not caused by rare events.	Plan for continuous, long-term controls and not only emergency measures during "spike" days.
+
 5	AQI changes sharply from day to day (standard deviation of about 169).	Use daily alerts that trigger when AQI crosses the Very Poor and Severe thresholds so people can respond early.
-6	Sensor data quality is itself a risk. About 8 to 10% of readings were missing in each column, and some sensors sent invalid -999 values.	Add automated validation and sensor health checks so decisions are based on reliable data.
 
 7. Tools Used
 Python (pandas, matplotlib) for cleaning and exploratory analysis
