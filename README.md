@@ -6,7 +6,7 @@ Task 4: Final Data Analytics Project | SWYNEX Technologies Internship
 
 This project combines my work from Tasks 1 to 3 into one end-to-end case study: cleaning a messy air quality dataset, exploring it with Python, and presenting the findings in an interactive Power BI dashboard.
 
-#1. Problem Statement
+# 1. Problem Statement
 
 Air pollution is one of India's most serious public health and environmental challenges. Decision-makers such as city administrations and pollution control bodies need to know which cities have the worst air, how often air quality reaches dangerous levels, and which pollutant matters most. The raw monitoring data, however, is messy: it contains duplicate records, inconsistent city names and date formats, text mixed into numeric fields, invalid sensor readings, and many missing values.
 
@@ -18,7 +18,7 @@ Which pollutant is the strongest driver of AQI, so that interventions can be pri
 
 The results are presented in an interactive dashboard so that non-technical stakeholders can explore them by city, AQI category and date.
 
-#2. Dataset Information
+# 2. Dataset Information
 
 Item	Details
 
@@ -46,7 +46,7 @@ AQI_Bucket	Category: Good, Satisfactory, Moderate, Poor, Very Poor, Severe	Text
 
 Records per city (cleaned): Delhi 22, Chennai 18, Mumbai 15, Jaipur 9, Ahmedabad 8, Lucknow 7, Kolkata 7, Hyderabad 6, Bengaluru 5, Pune 3.
 
-#3. Data Cleaning Process
+# 3. Data Cleaning Process
 
 The raw file had problems in almost every column. Each one was found and fixed as follows:
 
@@ -62,7 +62,7 @@ Problem found in raw data	How it was fixed
 
 Result: a clean dataset with no missing values, no duplicates, correct data types and consistent labels.
 
-#4. Exploratory Data Analysis
+# 4. Exploratory Data Analysis
 
 Script: analysis/exploratory_data_analysis.py (Python, pandas, matplotlib).
 
@@ -104,10 +104,10 @@ NO2	-0.08
 
 Anomaly check: the normal range (mean ± 2 std) is -24.0 to 651.5. No record falls outside it, so the very high AQI days are part of the regular pattern and not isolated spikes.
 
-#5. Interactive Dashboard
+# 5. Interactive Dashboard
 <img width="1537" height="863" alt="dashboard_screenshot" src="https://github.com/user-attachments/assets/401e56dc-ebff-453f-9816-a801da37ffa0" />
 
-6. Key Business Insights and Recommendations
+# 6. Key Business Insights and Recommendations
    
 1	Poor air quality is the norm, not the exception. The average AQI is 313.8, which sits in the "Very Poor" band, and 62% of records are Very Poor or Severe. Only 15% are Good or Satisfactory.	Treat air quality as a standing public health priority rather than a seasonal problem. Set up year-round health advisories.
 
@@ -119,7 +119,7 @@ Anomaly check: the normal range (mean ± 2 std) is -24.0 to 651.5. No record fal
 
 5	AQI changes sharply from day to day (standard deviation of about 169).	Use daily alerts that trigger when AQI crosses the Very Poor and Severe thresholds so people can respond early.
 
-#7. Tools Used
+# 7. Tools Used
    
 Python (pandas, matplotlib) for cleaning and exploratory analysis
 
