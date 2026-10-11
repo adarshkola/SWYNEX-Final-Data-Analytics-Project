@@ -14,7 +14,7 @@ This project cleans the raw AQI data for 10 Indian cities (2023) and analyses it
 
 Which cities have the highest and lowest air pollution?
 How frequently do days fall into unhealthy AQI categories?
-Which pollutant is the strongest driver of AQI, so that interventions can be prioritised?
+Which pollutant has the strongest positive correlation with AQI?
 
 The results are presented in an interactive dashboard so that non-technical stakeholders can explore them by city, AQI category and date.
 
@@ -55,16 +55,15 @@ Problem found in raw data	How it was fixed
 2	Inconsistent city names: Delhi, delhi, DELHI, Chennai , MUMBAI (14 variants for 10 cities)	Trimmed spaces and standardised capitalisation
 3	Mixed date formats: 03/21/2023, 28/01/2023, 17-01-2023, 2023-01-29	Parsed all formats and converted to a single DD/MM/YYYY format
 4	Text in a numeric column: 3 CO values written like 0.28 ppm	Stripped the unit and converted the column to numeric
-5	Invalid sensor values: 4 PM10 readings of -999 (a placeholder for "no reading")	Treated as missing values
-6	Inconsistent category labels: SEVERE , moderate , very poor, satisfactory (12 spellings for 6 categories)	Trimmed spaces and standardised to Title Case
-7	Missing values in every measurement column (about 8 to 10 per column, plus AQI_Bucket)	Numeric columns filled with the column mean; AQI_Bucket filled with the most frequent category
-8	Unneeded S.No column	Dropped
+5	Inconsistent category labels: SEVERE , moderate , very poor, satisfactory (12 spellings for 6 categories)	Trimmed spaces and standardised to Title Case
+6	Missing values in every measurement column (about 8 to 10 per column, plus AQI_Bucket)	Numeric columns filled with the column mean; AQI_Bucket filled with the most frequent category
+7	Unneeded S.No column	Dropped
 
 Result: a clean dataset with no missing values, no duplicates, correct data types and consistent labels.
 
 # 4. Exploratory Data Analysis
 
-Script: analysis/exploratory_data_analysis.py (Python, pandas, matplotlib).
+Script: exploratory_data_analysis.py (Python, pandas, matplotlib).
 
 Steps: checked shape, columns, missing values and duplicates; calculated summary statistics; computed average AQI per city; counted days per AQI category; measured the correlation of every pollutant with AQI; screened for anomalies using mean ± 2 standard deviations; and created 5 charts.
 
